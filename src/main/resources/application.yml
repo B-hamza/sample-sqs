@@ -1,0 +1,17 @@
+server:
+  port: ${PORT:8140}
+
+spring:
+  cloud:
+    aws:
+      sqs:
+        enabled: "true"
+        endpoint: "http://localhost:4566"
+        region: "eu-west-3"
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
